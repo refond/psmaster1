@@ -7,37 +7,39 @@ is: psmod1 ( https://github.com/refond/psmod1 )
 
 ## Running 
 
-Pre-requisites
+### Pre-requisites
 
  - A working JDK 1.8 (or later) installed on your machine:
    https://playframework.com/documentation/2.4.x/Installing#JDK-installation
  - Git open source program:
    https://help.github.com/articles/set-up-git/
 
-Installation steps
+### Installation steps
 
-1. Deploy psmod1 dependency
+#### Deploy psmod1 dependency
 
-    git clone https://github.com/refond/psmod1
-    cd psmod1
-    activator publish-local
+     git clone https://github.com/refond/psmod1
+     cd psmod1
+     activator publish-local
 
-2. Run current Play application
-   
-    git clone https://github.com/refond/psmaster1
-    cd psmaster1
-    activator run
+#### Run current Play application
 
-3. Go to http://localhost:9000/
+     git clone https://github.com/refond/psmaster1
+     cd psmaster1
+     activator run
+
+#### Go to:
+
+     http://localhost:9000/
 
 
 ## Project creation
 
 First commit created from: 
 
-    actor new
+     activator new
 
 Selecting: 
 
-    play-scala template
+     play-scala template
 
