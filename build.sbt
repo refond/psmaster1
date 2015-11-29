@@ -1,13 +1,13 @@
 name := """psmaster1"""
 
-version := "1.0-SNAPSHOT"
+version := "0.0.1-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
-  "com.escalesoft" %% "psmod1" % "1.0-SNAPSHOT",
+  "com.escalesoft" %% "psmod1" % "0.0.2-SNAPSHOT",
   jdbc,
   cache,
   ws,
