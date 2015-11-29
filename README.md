@@ -31,15 +31,3 @@ is: psmod1 ( https://github.com/refond/psmod1 )
 #### Go to:
 
      http://localhost:9000/
-
-
-## Project creation
-
-First commit created from: 
-
-     activator new
-
-Selecting: 
-
-     play-scala template
-
