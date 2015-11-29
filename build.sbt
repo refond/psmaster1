@@ -1,5 +1,7 @@
 name := """psmaster1"""
 
+organization := """com.escalesoft"""
+
 version := "0.0.1-SNAPSHOT"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
