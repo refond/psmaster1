@@ -15,25 +15,33 @@ class ApplicationSpec extends Specification {
 
   "Application" should {
 
-    "send 404 on a bad request" in new WithApplication{
-      route(FakeRequest(GET, "/boum")) must beSome.which (status(_) == NOT_FOUND)
+    "send 404 on a bad request" in new WithApplication {
+      route(FakeRequest(GET, "/boum")) must beSome.which(status(_) == NOT_FOUND)
     }
 
-    "render psmaster1 application index page" in new WithApplication{
+    "render psmaster1 application index page" in new WithApplication {
       val home = route(FakeRequest(GET, "/")).get
 
       status(home) must equalTo(OK)
       contentType(home) must beSome.which(_ == "text/html")
-      contentAsString(home) must contain ("Message from psmaster1")
+      contentAsString(home) must contain("Message from psmaster1")
     }
-    
-    "render psmaster1 application psmod1 module index page" in new WithApplication{
+
+    "render psmaster1 application psmod1 module index page" in new WithApplication {
       val home = route(FakeRequest(GET, "/psmod1")).get
 
       status(home) must equalTo(OK)
       contentType(home) must beSome.which(_ == "text/html")
-      contentAsString(home) must contain ("Message from psmod1")
+      contentAsString(home) must contain("Message from psmod1")
     }
-    
+
+    "render psmaster1 full namespace view: views.html.com.escalesoft.psmaster1.fns" in new WithApplication {
+      val home = route(FakeRequest(GET, "/fns")).get
+
+      status(home) must equalTo(OK)
+      contentType(home) must beSome.which(_ == "text/html")
+      contentAsString(home) must contain("full namespace")
+    }
+
   }
 }
