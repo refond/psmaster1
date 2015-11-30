@@ -8,6 +8,15 @@ The first and only module to be included so far
 is: psmod1 ( https://github.com/refond/psmod1 )
 
 
+## Project layout
+
+The current project follows the standard SBT Maven layout. 
+This is achieved using the new _experimental_ PlayLayoutPlugin feature introduced in 2.4.x   
+as disablePlugins(PlayLayoutPlugin) in build.sbt file.
+
+Official reference: https://playframework.com/documentation/2.4.x/Anatomy
+
+
 ## Running 
 
 
@@ -43,6 +52,7 @@ is: psmod1 ( https://github.com/refond/psmod1 )
 #### Run current Play application
 
      activator run
+
 
 #### Go to:
 

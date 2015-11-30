@@ -2,7 +2,7 @@ name := """psmaster1"""
 
 organization := """com.escalesoft"""
 
-version := "0.0.1-SNAPSHOT"
+version := "0.0.2-SNAPSHOT"
 
 // disablePlugins(PlayLayoutPlugin) activates standard SBT Maven layout as documented at: 
 // https://playframework.com/documentation/2.4.x/Anatomy
