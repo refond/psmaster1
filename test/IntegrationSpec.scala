@@ -14,11 +14,16 @@ class IntegrationSpec extends Specification {
 
   "Application" should {
 
-    "work from within a browser" in new WithBrowser {
+    "work from within a browser to psmaster1 application index page then move to psmod1 module index page" in new WithBrowser {
 
       browser.goTo("http://localhost:" + port)
 
-      browser.pageSource must contain("Your new application is ready.")
+      browser.pageSource must contain("Message from psmaster1")
+      
+      browser.goTo("http://localhost:" + port + "/psmod1")
+      
+      browser.pageSource must contain("Message from psmod1")
+      
     }
   }
 }
