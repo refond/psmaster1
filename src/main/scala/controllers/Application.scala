@@ -9,7 +9,7 @@ import com.escalesoft.psmod1.Psmod1Component
 class Application @Inject() (psmod1: Psmod1Component) extends Controller {
 
   def index = Action {
-    Ok(views.html.index(psmod1.wave("Message from psmaster1")))
+    Ok(views.html.com.escalesoft.psmaster1.index(psmod1.wave("Message from psmaster1")))
   }
   
   def fns = Action {
